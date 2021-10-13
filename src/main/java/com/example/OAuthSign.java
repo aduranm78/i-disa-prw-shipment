@@ -20,7 +20,7 @@ public class OAuthSign {
 	    String consumer_key = "0f28f2f921c537a0520cd09201b9e502688c91593b7a76344cfb1e736e25f149";
 		String consumer_secret = "1f5e0c3795aecacbdfc449b145c5eefa41fd326812cf9a1983812a3c224e7adf";
 		String access_token = "8aff3dcbad25dac1fe82eadb77b6e11f85f95492ed4d73cb19c1c4e2169acc21";
-		String access_secret= "ef68c7a53e4e96910edc6da4612c0be3e33ece360fb4da0a7fdc3df87e15d386"
+		String access_secret= "ef68c7a53e4e96910edc6da4612c0be3e33ece360fb4da0a7fdc3df87e15d386";
 
 	    OAuthConsumer consumer = new CommonsHttpOAuthConsumer(consumer_key, consumer_secret);
 	    consumer.setMessageSigner(new HmacSha256MessageSigner());
