@@ -17,10 +17,10 @@ import oauth.signpost.signature.HmacSha256MessageSigner;
 
 public class OAuthSign {
 	public static String getAuthHeader(String uri) throws IOException {           
-	    String consumer_key = "594f75ba092ebe059027f6af0a6eb3b78cdb94419282f35c1de6b91803d708aa";
-		String consumer_secret = "eba80a6a6f7374c5ba30220ca2fc7d4bf67db5120b8b327effadfe21c558de03";
-		String access_token = "1baa836e6e43d0c06aea6eb30a7233ae1974969a367092574b95f5b2a715bc98";
-		String access_secret= "e74aebe07b3827288b18776788d20b68ceae94777e4d26765884176fbabfa5b2";
+	    String consumer_key = "0f28f2f921c537a0520cd09201b9e502688c91593b7a76344cfb1e736e25f149";
+		String consumer_secret = "1f5e0c3795aecacbdfc449b145c5eefa41fd326812cf9a1983812a3c224e7adf";
+		String access_token = "8aff3dcbad25dac1fe82eadb77b6e11f85f95492ed4d73cb19c1c4e2169acc21";
+		String access_secret= "ef68c7a53e4e96910edc6da4612c0be3e33ece360fb4da0a7fdc3df87e15d386"
 
 	    OAuthConsumer consumer = new CommonsHttpOAuthConsumer(consumer_key, consumer_secret);
 	    consumer.setMessageSigner(new HmacSha256MessageSigner());
@@ -30,7 +30,7 @@ public class OAuthSign {
 	    
 	    try {
 	        HttpRequest signedReq = consumer.sign(httppost);
-	        String realm = "OAuth realm=\"5298967_SB1\",";
+	        String realm = "OAuth realm=\"5298967_RP\",";
 	        return signedReq.getHeader("Authorization").toString().replace("OAuth", realm);
 	    } catch (OAuthMessageSignerException ex) {
 	        Logger.getLogger(HttpPost.class.getName()).log(Level.SEVERE, null, ex);
